@@ -1,0 +1,7 @@
+[EapApi]
+.PUB
+DxlApigeeUrl = https://test.dxl.api-nonprod.dxl-vf.de/solstice/v1/
+DxlApigeeUser = zPSr6sqcljOtUqoes7mU8cVvqVJ7nrWT
+DxlApigeePassword = y5phXsXbNgbBbZOcQJ8MNv25xRih4Gku
+
+DxlDeviceActivationUrl = https://test.dxl.api-nonprod.dxl-vf.de/solstice/v1/
