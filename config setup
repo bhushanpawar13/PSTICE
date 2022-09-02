@@ -1,0 +1,70 @@
+server_list = server_test2b.ini
+
+subsection = csc-ksc
+subsection = csc-support
+
+[services]
+.HV|HA|ECC|PUB|BBP|CSC|VAS|IAV|CSCK|STB|WWW|PORTAL
+IbpZ3  = http://service-dev-vbox.kabeldeutschland.de
+
+[serviceRest]
+.PUB|WWW|CSC|CSCK|ECC|HV|HA|IAV|VAS|STB|API
+IbpZ3         = http://service-dev-vbox.kabeldeutschland.de
+ApiZ2         = http://api-dev-vbox.kabeldeutschland.de
+#PublicZ2     = http://www-dev-vbox.kabeldeutschland.de
+KabelZ2       = http://kabel-vf-dev-vbox.kabeldeutschland.de
+VpZ2          = http://secure-dev-vbox.kabeldeutschland.de
+PublicZ2      = http://z2-test1b-web-pub-lb.kabeldeutschland.de
+
+[URL]
+.HV|HA|ECC|PUB|BBP|CSC|VAS|IAV|CSCK|STB|WWW|PORTAL
+URL_CSC         = https://kabel-vf-dev-vbox.kabeldeutschland.de
+URL_KABEL_DE    = http://www-dev-vbox.kabeldeutschland.de
+URL_KABEL_VF    = https://kabel-vf-dev-vbox.kabeldeutschland.de
+URL_ZUHAUSEPLUS = https://zuhauseplus-vf-dev-vbox.kabeldeutschland.de
+
+STATIC_URL_SUFFIX = -dev-vbox.kabeldeutschland.de
+.HV|HA|ECC|PUB|BBP|VAS|IAV|CSCK|STB|WWW|PORTAL
+URL_IBP         = https://secure-dev-vbox.kabeldeutschland.de
+URL_ECC         = https://ecc-dev-vbox.kabeldeutschland.de
+.CSC
+URL_IBP         = https://kabel-vf-dev-vbox.kabeldeutschland.de
+
+[Configuration]
+.HV|HA|ECC|PUB|BBP|CSC|VAS|IAV|CSCK|STB|WWW|PORTAL
+URL_CSC        = https://kabel-vf-dev-vbox.kabeldeutschland.de
+URL_IBP        = https://secure-dev-vbox.kabeldeutschland.de
+
+[Session]
+.HV|HA|ECC|PUB|BBP|CSC|VAS|IAV|CSCK|STB|WWW|PORTAL
+SESSION_DBHOST = ibpz2_db_1
+SESSION_DBPASS = kdg_portal
+SESSION_DBUSER = kdg_portal
+SESSION_DBNAME = kdg_portal
+
+[Caching]
+.HV|HA|ECC|PUB|CSC|IAV|VAS|CSCK|WWW|STB|API
+CACHE_ENABLED = true
+CACHE_BACKEND = File
+CACHE_COMPRESSION = true
+
+[Logging]
+.HV|HA|ECC|PUB|CSC|IAV|VAS|CSCK|WWW|STB|OAS|API
+# LOG4PHP_CONFIG_FILE = all2FirephpAndVmFileWithRulesEngine.php
+LOG_LEVEL = INFO
+LOG_TYPE = file
+LOG_FILE = /srv/www/logs/monolog.log
+
+[FeatureSwitch]
+.PUB
+EnableSolsticeEap=1
+
+.HV|HA|ECC|PUB|CSC|IAV|VAS|CSCK|WWW|STB|OAS|API
+PRODUCT_SETUP_FLAVOUR=non-prod
+
+[EapApi]
+.PUB
+DxlApigeeUrl = https://test.dxl.api-nonprod.dxl-vf.de/solstice/v1/
+DxlApigeeUser = zPSr6sqcljOtUqoes7mU8cVvqVJ7nrWT
+DxlApigeePassword = y5phXsXbNgbBbZOcQJ8MNv25xRih4Gku
+DxlDeviceActivationUrl = https://test.dxl.api-nonprod.dxl-vf.de/solstice/v1/

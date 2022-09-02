@@ -1,0 +1,46 @@
+for Local IBP setup : 
+
+Check if these URLS are accessible : 
+https://ecc-dev-vbox.kabeldeutschland.de/ecc/
+
+https://service-dev-vbox.kabeldeutschland.de/api/
+
+To enable the current branch notification in the terminal : 
+1. Add the below code in .bashsh file under Home directory 
+
+# simple git prompt layout
+PS1='\u@\h \w\[\033[1;33m\]$(__git_ps1)\[\033[0m\]\$ '
+GIT_PS1_SHOWDIRTYSTATE=yes
+GIT_PS1_SHOWSTASHSTATE=yes
+GIT_PS1_SHOWUNTRACKEDFILES=yes
+GIT_PS1_SHOWUPSTREAM=auto
+
+
+EAP 
+
+
+git pull
+composer install 
+https://egf-test1b.kabeldeutschland.de/api/
+cd .. 
+phing generateRunConfigurations
+phing functionaltest
+cd gui
+
+-----------------------------------
+[FeatureSwitch]
+.PUB
+EnableSolsticeEap=1
+-----------------------
+[EapApi]
+.PUB
+DxlApigeeUrl = https://test.dxl.api-nonprod.dxl-vf.de/solstice/v1/
+DxlApigeeUser = zPSr6sqcljOtUqoes7mU8cVvqVJ7nrWT
+DxlApigeePassword = y5phXsXbNgbBbZOcQJ8MNv25xRih4Gku
+DxlDeviceActivationUrl = https://test.dxl.api-nonprod.dxl-vf.de/solstice/v1/
+
+
+
+
+To update the composer install - : sudo composer self-update
+49314
